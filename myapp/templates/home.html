@@ -1,0 +1,19 @@
+{% load static %}
+
+<html>
+	<head>
+		<title>Mailowls</title>
+	</head>
+
+	<body>
+
+		<div>
+			<form method="POST" enctype="multipart/form-data" class="image-form">
+		    	{% csrf_token %}
+		        {{ form.as_p }}
+		        <button type="submit" class="save btn btn-default">Import</button>
+   			 </form>
+		</div>
+
+	</body>
+</html>
